@@ -1,1 +1,1161 @@
-## Agostina Palomas
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Atrani reúne Pilates, café saludable y cowork en un refugio urbano para moverte, comer rico y trabajar a tu ritmo."
+    />
+    <meta name="theme-color" content="#f5f1e8" />
+    <title>Atrani — Pilates, Café & Cowork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f6f2e9;
+        --sand: #eae4d8;
+        --ink: #27372f;
+        --muted: #5e6c62;
+        --green: #3d5948;
+        --green-dark: #293f33;
+        --clay: #a95f43;
+        --sage: #dfe5da;
+        --line: rgba(39, 55, 47, 0.18);
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .announcement {
+        padding: 10px 20px;
+        background: var(--green-dark);
+        color: var(--paper);
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        min-height: 88px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 0 7.2%;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand {
+        display: inline-flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      .brand-name {
+        font-family: var(--serif);
+        font-size: 29px;
+        letter-spacing: 0.04em;
+      }
+
+      .brand-caption {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 8px;
+        letter-spacing: 0.16em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .main-nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(20px, 3vw, 46px);
+      }
+
+      .main-nav a,
+      .header-link {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .main-nav a {
+        padding: 12px 0;
+        transition: color 180ms ease;
+      }
+
+      .main-nav a:hover,
+      .main-nav a:focus-visible {
+        color: var(--clay);
+      }
+
+      .header-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .header-link span {
+        margin-left: 7px;
+      }
+
+      .menu-toggle {
+        display: none;
+        border: 0;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: grid;
+        min-height: min(700px, 74vw);
+        grid-template-columns: 0.92fr 1.08fr;
+        padding: 34px 7.2% 68px;
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px 8% 40px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--green);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 28px;
+        height: 1px;
+        background: var(--clay);
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 550px;
+        margin: 26px 0 20px;
+        font-family: var(--serif);
+        font-size: clamp(50px, 5.3vw, 76px);
+        font-weight: 500;
+        letter-spacing: -0.045em;
+        line-height: 1.02;
+      }
+
+      h1 em,
+      .section-heading em {
+        color: var(--green);
+        font-weight: 500;
+      }
+
+      .hero-copy > p {
+        max-width: 410px;
+        margin-bottom: 32px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .hero-secondary-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 8px;
+        border-bottom: 1px solid var(--line);
+        color: var(--green-dark);
+        font-size: 12px;
+      }
+
+      .hero-secondary-link:hover,
+      .hero-secondary-link:focus-visible {
+        border-color: var(--clay);
+        color: var(--clay);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 22px;
+        background: var(--green-dark);
+        color: var(--paper);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        background: var(--green);
+      }
+
+      .button span {
+        font-size: 17px;
+        line-height: 0;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 520px;
+        background: var(--sand);
+      }
+
+      .hero-visual > img {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .pilates-card > img {
+        filter: saturate(0.62);
+        object-position: center 42%;
+      }
+
+      .cafe-card > img {
+        object-position: center 55%;
+      }
+
+      .cowork-card > img {
+        object-position: center;
+      }
+
+      .hero-note {
+        position: absolute;
+        right: 0;
+        bottom: 26px;
+        display: flex;
+        width: min(290px, 68%);
+        min-height: 91px;
+        align-items: center;
+        gap: 17px;
+        padding: 18px 22px;
+        background: var(--paper);
+      }
+
+      .note-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid var(--clay);
+        border-radius: 50%;
+        color: var(--clay);
+        font-family: var(--serif);
+        font-size: 20px;
+      }
+
+      .hero-note p {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 16px;
+        line-height: 1.35;
+      }
+
+      .hero-note small {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+        gap: 8%;
+        padding: 96px 12%;
+        background: var(--sand);
+      }
+
+      .intro-aside {
+        color: var(--green);
+        font-family: var(--serif);
+        font-size: 21px;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      .intro-aside::before {
+        display: block;
+        width: 38px;
+        height: 1px;
+        margin-bottom: 20px;
+        background: var(--clay);
+        content: "";
+      }
+
+      .section-heading {
+        max-width: 650px;
+        margin-bottom: 18px;
+        font-family: var(--serif);
+        font-size: clamp(38px, 4.2vw, 58px);
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+      }
+
+      .intro-copy p {
+        max-width: 510px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .offerings {
+        padding: 100px 7.2% 108px;
+      }
+
+      .section-top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 38px;
+      }
+
+      .section-top .section-heading {
+        margin: 16px 0 0;
+      }
+
+      .section-top > p {
+        max-width: 300px;
+        margin: 0 0 6px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .offering-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .offering-card {
+        position: relative;
+        display: flex;
+        min-height: 430px;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        padding: 26px;
+        color: var(--paper);
+        background: var(--green-dark);
+      }
+
+      .offering-card > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 500ms ease;
+      }
+
+      .offering-card:hover > img {
+        transform: scale(1.025);
+      }
+
+      .offering-card::before {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(25, 40, 31, 0.03) 15%, rgba(25, 40, 31, 0.82));
+        content: "";
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 1;
+        max-width: 380px;
+      }
+
+      .card-content small {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .card-content h3 {
+        margin-bottom: 10px;
+        font-family: var(--serif);
+        font-size: clamp(29px, 3vw, 40px);
+        font-weight: 500;
+        line-height: 1.12;
+      }
+
+      .card-content p {
+        max-width: 360px;
+        margin-bottom: 22px;
+        color: rgba(246, 242, 233, 0.92);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .text-link {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        gap: 13px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid currentColor;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .text-link span {
+        font-size: 16px;
+      }
+
+      .ritual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--sage);
+        color: var(--ink);
+      }
+
+      .ritual-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 430px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .ritual--reverse .ritual-image {
+        order: 2;
+      }
+
+      .ritual-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 76px clamp(38px, 7vw, 100px);
+      }
+
+      .ritual-copy h2 {
+        margin: 22px 0 17px;
+        font-family: var(--serif);
+        font-size: clamp(38px, 4.3vw, 58px);
+        font-weight: 500;
+        letter-spacing: -0.045em;
+        line-height: 1.02;
+      }
+
+      .ritual-copy h2 em {
+        color: var(--clay);
+        font-weight: 500;
+      }
+
+      .ritual-copy p {
+        max-width: 390px;
+        margin-bottom: 28px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .ritual-copy .text-link {
+        color: var(--ink);
+      }
+
+      .schedule {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 8%;
+        padding: 94px 12%;
+        background: var(--paper);
+      }
+
+      .schedule .section-heading {
+        margin: 16px 0 20px;
+      }
+
+      .schedule-copy > p {
+        max-width: 390px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .schedule-list {
+        align-self: center;
+        padding: 28px;
+        background: white;
+      }
+
+      .schedule-row {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        align-items: center;
+        gap: 16px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .schedule-row::before {
+        color: var(--clay);
+        content: counter(visit, decimal-leading-zero);
+        font-family: var(--serif);
+        font-size: 19px;
+      }
+
+      .schedule-list {
+        counter-reset: visit;
+      }
+
+      .schedule-row {
+        counter-increment: visit;
+      }
+
+      .schedule-row a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        color: var(--ink);
+        font-size: 12px;
+        line-height: 1.65;
+      }
+
+      .schedule-row a:hover,
+      .schedule-row a:focus-visible {
+        color: var(--clay);
+      }
+
+      .closing {
+        position: relative;
+        display: flex;
+        min-height: 405px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 20px;
+        overflow: hidden;
+        background: var(--sand);
+        text-align: center;
+      }
+
+      .closing::before,
+      .closing::after {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        border: 1px solid rgba(169, 95, 67, 0.34);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .closing::before {
+        top: -112px;
+        left: -65px;
+      }
+
+      .closing::after {
+        right: -68px;
+        bottom: -125px;
+        width: 280px;
+        height: 280px;
+      }
+
+      .closing .section-heading {
+        margin: 18px 0 27px;
+      }
+
+      .site-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 28px 7.2%;
+        background: var(--green-dark);
+        color: var(--paper);
+      }
+
+      .site-footer .brand-caption {
+        color: rgba(246, 242, 233, 0.72);
+      }
+
+      .footer-note,
+      .footer-nav a {
+        color: rgba(246, 242, 233, 0.82);
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .footer-nav a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 24px;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--clay);
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 800px) {
+        .site-header {
+          min-height: 76px;
+          padding: 0 6%;
+        }
+
+        .main-nav {
+          gap: 18px;
+        }
+
+        .main-nav a,
+        .header-link {
+          font-size: 9px;
+        }
+
+        .hero {
+          min-height: 580px;
+          grid-template-columns: 0.9fr 1.1fr;
+          padding-right: 6%;
+          padding-left: 6%;
+        }
+
+        .hero-visual {
+          min-height: 470px;
+        }
+
+        .intro,
+        .schedule {
+          padding-right: 9%;
+          padding-left: 9%;
+        }
+
+        .offering-card {
+          min-height: 390px;
+          padding: 26px;
+        }
+
+        .offering-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .offering-card:last-child {
+          grid-column: 1 / -1;
+          min-height: 340px;
+        }
+
+        .card-content h3 {
+          font-size: clamp(28px, 4vw, 38px);
+        }
+
+        .ritual-copy {
+          padding-right: 9%;
+          padding-left: 9%;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .announcement {
+          padding: 9px 12px;
+          font-size: 8px;
+        }
+
+        .site-header {
+          min-height: 72px;
+          padding: 0 6%;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 0 12px 12px;
+        }
+
+        .menu-toggle::after {
+          content: "+";
+          font-family: var(--serif);
+          font-size: 20px;
+          line-height: 0.7;
+        }
+
+        .menu-toggle[aria-expanded="true"]::after {
+          content: "−";
+        }
+
+        .main-nav {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 8px 6% 20px;
+          border-bottom: 1px solid var(--line);
+          background: var(--paper);
+        }
+
+        .main-nav.is-open {
+          display: flex;
+        }
+
+        .main-nav a {
+          padding: 15px 0;
+          border-bottom: 1px solid var(--line);
+          font-size: 10px;
+        }
+
+        .header-link {
+          display: none;
+        }
+
+        .hero {
+          display: flex;
+          flex-direction: column;
+          padding: 24px 6% 54px;
+        }
+
+        .hero-copy {
+          padding: 34px 0 37px;
+        }
+
+        h1 {
+          max-width: 470px;
+          font-size: clamp(45px, 12.4vw, 66px);
+        }
+
+        .hero-copy > p {
+          max-width: 360px;
+          font-size: 14px;
+        }
+
+        .hero-visual {
+          min-height: 350px;
+          margin-left: 0;
+        }
+
+        .hero-visual > img {
+          min-height: 350px;
+        }
+
+        .hero-note {
+          right: 0;
+          bottom: 18px;
+          min-height: 78px;
+          padding: 13px 16px;
+        }
+
+        .hero-note p {
+          font-size: 14px;
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding: 66px 8%;
+        }
+
+        .intro-aside {
+          font-size: 16px;
+        }
+
+        .section-heading {
+          font-size: clamp(36px, 9.5vw, 48px);
+        }
+
+        .offerings {
+          padding: 72px 6% 78px;
+        }
+
+        .section-top {
+          display: block;
+          margin-bottom: 30px;
+        }
+
+        .section-top > p {
+          margin-top: 15px;
+        }
+
+        .offering-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .offering-card {
+          min-height: 390px;
+          padding: 23px;
+        }
+
+        .offering-card:last-child {
+          grid-column: auto;
+          min-height: 390px;
+        }
+
+        .ritual {
+          grid-template-columns: 1fr;
+        }
+
+        .ritual--reverse .ritual-image {
+          order: 0;
+        }
+
+        .ritual-image img {
+          min-height: 300px;
+        }
+
+        .ritual-copy {
+          padding: 62px 8%;
+        }
+
+        .schedule {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          padding: 70px 8%;
+        }
+
+        .schedule-list {
+          padding: 20px;
+        }
+
+        .closing {
+          min-height: 360px;
+          padding: 65px 7%;
+        }
+
+        .site-footer {
+          flex-wrap: wrap;
+          padding: 28px 7%;
+        }
+
+        .footer-note {
+          order: 3;
+          width: 100%;
+        }
+
+        .footer-nav {
+          gap: 16px;
+        }
+
+        .footer-nav a {
+          font-size: 8px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .hero-visual,
+        .hero-visual > img {
+          min-height: 300px;
+        }
+
+        .offering-card {
+          min-height: 420px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="announcement">Pilates · café saludable · cowork, en un mismo lugar</div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Atrani, inicio">
+        <span class="brand-name">Atrani</span>
+        <span class="brand-caption">pilates · café · cowork</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        Menú
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#pilates">Pilates</a>
+        <a href="#cafe">Café</a>
+        <a href="#cowork">Cowork</a>
+        <a href="#horarios">Horarios</a>
+      </nav>
+      <a class="header-link" href="#horarios">Cómo coordinar <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="eyebrow">Pilates · café · cowork</span>
+          <h1>Movete. Nutrite. <em>Hacé espacio.</em></h1>
+          <p>
+            Un estudio de Pilates, un café con opciones saludables y un espacio de cowork para
+            trabajar o simplemente quedarte un rato.
+          </p>
+          <a class="button" href="#experiencias">Conocé las propuestas <span aria-hidden="true">↗</span></a>
+          <a class="hero-secondary-link" href="#horarios">Ver cómo coordinar una visita</a>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1500&q=85"
+            alt="Espacio luminoso con sillones y una mesa, preparado para quedarse a trabajar"
+            fetchpriority="high"
+          />
+          <div class="hero-note">
+            <span class="note-mark" aria-hidden="true">A</span>
+            <p>Tres formas de vivir Atrani.<small>Pilates · café · cowork</small></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" id="filosofia">
+        <p class="intro-aside">Un refugio urbano para moverte, comer rico y trabajar con calma.</p>
+        <div class="intro-copy">
+          <span class="eyebrow">Bienvenida a Atrani</span>
+          <h2 class="section-heading">Un solo lugar. <em>Tres buenas razones.</em></h2>
+          <p>
+            Vení a una clase de Pilates, elegí algo del café o instalate en el cowork. En Atrani,
+            cada propuesta tiene su propio espacio y vos elegís cómo combinarla.
+          </p>
+        </div>
+      </section>
+
+      <section class="offerings" id="experiencias" aria-labelledby="experiencias-title">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">Conocé Atrani</span>
+            <h2 class="section-heading" id="experiencias-title">Tres propuestas, <em>un mismo espacio.</em></h2>
+          </div>
+          <p>Elegí una clase, algo rico o un rincón para trabajar. También podés quedarte un rato más.</p>
+        </div>
+        <div class="offering-grid">
+          <article class="offering-card pilates-card" id="pilates">
+            <img
+              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85"
+              alt="Clase grupal de movimiento sobre colchonetas en un estudio amplio"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <small>Movimiento consciente</small>
+              <h3>Pilates</h3>
+              <p>
+                Clases para moverte con atención y hacer lugar a un momento propio.
+              </p>
+              <a class="text-link" href="#horarios">Ver clases y reservas <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="offering-card cafe-card">
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85"
+              alt="Plato colorido de comida saludable servido sobre una mesa de madera"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <small>Para comer rico</small>
+              <h3>Café saludable</h3>
+              <p>
+                Opciones saludables, proteicas, sin gluten y sin azúcares refinados.
+              </p>
+              <a class="text-link" href="#cafe">Ver propuesta de café <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="offering-card cowork-card">
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+              alt="Personas trabajando juntas con computadoras portátiles alrededor de una mesa"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <small>Un lugar para enfocarte</small>
+              <h3>Cowork</h3>
+              <p>
+                Un espacio tranquilo para trabajar, cambiar de aire o dejar que el día fluya.
+              </p>
+              <a class="text-link" href="#cowork">Conocer el cowork <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ritual" id="cafe">
+        <div class="ritual-image">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85"
+            alt="Tazas de café servidas para compartir en una mesa"
+            loading="lazy"
+          />
+        </div>
+        <div class="ritual-copy">
+          <span class="eyebrow">Café saludable</span>
+          <h2>Algo rico, <em>a tu manera.</em></h2>
+          <p>
+            La propuesta incluye opciones saludables, proteicas, sin gluten y sin azúcares
+            refinados. El menú completo y los productos disponibles todavía no están publicados
+            en esta web.
+          </p>
+          <a class="text-link" href="#experiencias">Volver a las propuestas <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="ritual ritual--reverse" id="cowork">
+        <div class="ritual-image">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+            alt="Sala luminosa con una mesa compartida y sillas para trabajar"
+            loading="lazy"
+          />
+        </div>
+        <div class="ritual-copy">
+          <span class="eyebrow">Cowork en Atrani</span>
+          <h2>Trabajá acá. <em>Quedate a gusto.</em></h2>
+          <p>
+            Cambiá de aire y encontrá un lugar tranquilo para trabajar o simplemente pasar el
+            rato. Consultá la disponibilidad y las condiciones del espacio antes de venir.
+          </p>
+          <a class="text-link" href="#horarios">Consultar cómo coordinar <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="schedule" id="horarios">
+        <div class="schedule-copy">
+          <span class="eyebrow">Antes de venir</span>
+          <h2 class="section-heading">Horarios y <em>reservas.</em></h2>
+          <p>
+            La grilla de Pilates, las reservas y la disponibilidad del cowork aún no están
+            integradas en esta página. Consultá los canales oficiales de Atrani para confirmar
+            horarios y coordinar tu visita.
+          </p>
+        </div>
+        <nav class="schedule-list" aria-label="Accesos a las propuestas de Atrani">
+          <div class="schedule-row">
+            <a href="#pilates">Conocer Pilates</a>
+          </div>
+          <div class="schedule-row">
+            <a href="#cafe">Ver opciones del café</a>
+          </div>
+          <div class="schedule-row">
+            <a href="#cowork">Conocer el cowork</a>
+          </div>
+        </nav>
+      </section>
+
+      <section class="closing">
+        <span class="eyebrow">Nos vemos en Atrani</span>
+        <h2 class="section-heading">Elegí cómo querés <em>disfrutarlo.</em></h2>
+        <a class="button" href="#experiencias">Explorá las propuestas <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#inicio" aria-label="Atrani, volver al inicio">
+        <span class="brand-name">Atrani</span>
+        <span class="brand-caption">pilates · café · cowork</span>
+      </a>
+      <span class="footer-note">Un espacio para moverte, comer y trabajar a tu ritmo.</span>
+      <nav class="footer-nav" aria-label="Navegación del pie">
+        <a href="#pilates">Pilates</a>
+        <a href="#cafe">Café</a>
+        <a href="#cowork">Cowork</a>
+        <a href="#horarios">Horarios</a>
+      </nav>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector("#main-nav");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        mainNav.classList.toggle("is-open", !isExpanded);
+      });
+
+      mainNav.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          mainNav.classList.remove("is-open");
+        }
+      });
+    </script>
+  </body>
+</html>
